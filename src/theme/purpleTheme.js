@@ -1,19 +1,22 @@
 import { createTheme } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { red, blue, green } from "@mui/material/colors";
 
-
-export const purpleTheme = createTheme({
-    palette:{
-        primary:{
-            main: '#262254'
+export const customTheme = createTheme({
+    palette: {
+        primary: {
+            main: blue[500],
         },
-        secondary:{
-            main: '#543884'
+        secondary: {
+            main: green[400],
         },
-        error:{
-            main: red.A400
-        }
-
-    }
-})
-
+        error: {
+            main: red.A400,
+        },
+        background: {
+            default: "#f4f6f8",
+        },
+    },
+    typography: {
+        fontFamily: "'Poppins', sans-serif",
+    },
+});
